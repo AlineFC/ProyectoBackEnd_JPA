@@ -1,0 +1,45 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package cl.accenture.proyecto.model;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+/**
+ *
+ * @author CrateX
+ */
+@Entity
+@Table(name="administradores")
+public class Rol {
+
+
+    @Id
+    @Column(name="idRol")
+    private Integer id;
+
+    @Column(name ="nombre" )
+    private String nombre;
+
+    @Column(name = "descripcion")
+    private String descripcion;
+
+
+
+    public Rol(){
+    }
+
+
+    public Rol(Integer idRol, String nombre, String descripcion) {
+        this.id = idRol;
+        this.nombre = nombre;
+        this.descripcion=descripcion;
+    }
+
+    
+}
